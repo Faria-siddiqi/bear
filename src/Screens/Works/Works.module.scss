@@ -1,0 +1,86 @@
+@import '../../Index.scss';
+
+.main_works{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    .works_head{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            color: #ffffff;
+            font-size: 60px;
+            letter-spacing: .135em;
+            margin: 0 0 22px;
+            text-transform: uppercase;
+            font-family: Lemons-Bold;
+            span{
+                color: #3a8bae;
+            }
+        }
+    }
+    .joining{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        // margin-top: 8rem;
+        background-image: url('../../../public/Assets/overlaypanda.png');
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 5rem 5rem;
+        h1,p,button{
+            color: #ffffff;
+            position: relative;
+            top: 4rem;
+        }
+        h1{
+            font-size: 60px;
+            letter-spacing: .135em;
+            margin: 0 0 22px;
+            text-transform: uppercase;
+            font-family: Lemons-Bold;
+            span{
+                color: #3a8bae;
+            }
+        }
+        p{
+            font-size: 18px;
+            letter-spacing: .105em;
+            line-height: 1.8em;
+            margin: 0 0 22px;
+            padding: 0 8rem;
+            font-family: Lemons-Regular;
+            font-weight: bold;
+            text-align: center;
+        }
+        button{
+            background: #fff;
+    border-radius: 9px;
+    border-bottom-right-radius: 0;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Lemon\/Milk;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .175em;
+    line-height: 1.09em;
+    overflow: hidden;
+    padding: 25px 70px;
+    position: relative;
+    text-align: center;
+    transition: all .4s ease-in-out;
+    vertical-align: middle;
+    border: none;
+    font-family: Lemons-Bold;
+        }
+    }
+}
