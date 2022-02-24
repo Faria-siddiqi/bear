@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Heading.module.scss';
 import { Row, Col } from 'reactstrap';
 
 const Heading = () => {
+  let [sideBarState, setSiteBarState] = useState(false);
+  function sidebarOpener() {
+    setSiteBarState(true);
+  }
+  function sidebarCloser() {
+    setSiteBarState(false);
+  }
   return (
     <div className={styles.main_heading}>
+      {sideBarState ? (
+        <div className={styles.sidebar}>
+          <div className={styles.lists}>
+            <p>ABOUT US</p>
+            <p>WORKS</p>
+            <p>ARTIST</p>
+            <p>ROADMAP</p>
+            <p>FAQ</p>
+            <p>JOIN</p>
+          </div>
+          <div>
+            <img
+              src='Assets/sidebar.png'
+              alt=''
+              onClick={sideBarState ? sidebarCloser : sidebarOpener}
+            />
+          </div>
+        </div>
+      ) : null}
       <Row>
         <Col sm={12} md={12}>
           <div className={styles.heading_nav}>
@@ -23,7 +49,11 @@ const Heading = () => {
               <p>JOIN</p>
             </div>
             <div className={styles.side_bar}>
-              <img src='Assets/sidebar.png' alt='' />
+              <img
+                src='Assets/sidebar.png'
+                alt=''
+                onClick={sideBarState ? sidebarCloser : sidebarOpener}
+              />
             </div>
           </div>
         </Col>
