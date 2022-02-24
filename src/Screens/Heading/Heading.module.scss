@@ -1,9 +1,8 @@
 @import '../../Index.scss';
 
-
-.sidebar{
+.sidebar {
   background: #000;
-  height: 100%!important;
+  height: 100% !important;
   margin: 0;
   overflow-y: auto;
   color: #ffffff;
@@ -16,13 +15,13 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem;
-  .lists{
+  .lists {
     padding-top: 2rem;
     p {
       font-family: lemons;
       font-weight: bold;
       color: #ffffff;
-      padding:0.2rem 0.1rem;
+      padding: 0.2rem 0.1rem;
     }
   }
 }
@@ -32,22 +31,25 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  padding-top: 1rem;
   .heading_nav {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 6rem;
+    z-index: 1000;
     @include media('mobile') {
-        justify-content: space-between;
-        padding: 0 1rem;
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      position: relative;
+      bottom: 0;
     }
-    // position: fixed;
-    // bottom: 25rem;
-    .side_bar{
+    position: fixed;
+    bottom: 25rem;
+    .side_bar {
       display: none;
-      @include media("mobile"){
+      @include media('mobile') {
         display: block;
       }
     }
