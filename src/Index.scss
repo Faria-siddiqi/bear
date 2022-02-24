@@ -93,6 +93,11 @@ a {
 }
 
 @mixin media($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
   @if $breakpoint == tablet {
     @media only screen and (max-width: 1025px) {
       @content;
@@ -124,3 +129,4 @@ a {
   width: 22px !important;
   height: 22px !important;
 }
+

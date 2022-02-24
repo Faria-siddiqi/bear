@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 ReactDOM.render(
   <React.StrictMode>

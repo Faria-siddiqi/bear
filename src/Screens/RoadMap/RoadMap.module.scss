@@ -1,0 +1,110 @@
+@import '../../Index.scss';
+
+.main_road_map {
+  width: 100%;
+  height: 100%;
+  margin-top: 9rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10rem;
+  .circle {
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+    // background: hsla(0, 0%, 100%, 0.2);
+    background-color: #4dc3f4;
+    border-radius: 50%;
+    box-shadow: 0 0 0 hsl(0deg 0% 100% / 20%);
+    height: 54px;
+    padding: 8px;
+    position: relative;
+    width: 54px;
+    z-index: 99;
+    top: 3.2rem;
+    right: 5rem;
+  }
+
+  .line {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    bottom: 2rem;
+    .dottedline {
+      position: relative;
+      top: 10.5rem;
+      right: 1.7rem;
+      height: 100%;
+      border-right: 2px dotted white;
+    }
+  }
+  .road_map_content {
+    width: 70%;
+    margin-top: 4rem;
+    bottom: 1rem;
+    position: relative;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    h1 {
+      color: #4dc3f4;
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 0.135em;
+      margin-bottom: 18px;
+      font-family: Lemons-Regular;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.135em;
+      margin-bottom: 24px;
+      font-family: Lemons-Bold;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      line-height: 1.6em;
+      margin-bottom: 38px;
+      font-family: Lemons-Regular;
+    }
+  }
+  .road_map_head {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: #141417;
+      font-size: 100px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      line-height: 1.21em;
+      text-align: center;
+      font-family: Lemons-Bold;
+      @include media('mobile') {
+        font-size: 40px;
+      }
+    }
+    h1 {
+      font-size: 60px;
+      position: absolute;
+      letter-spacing: 0.135em;
+      margin: 0 0 22px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-family: Lemons-Bold;
+      top: 1.7rem;
+      @include media('mobile') {
+        font-size: 30px;
+        top: 1rem;
+      }
+    }
+  }
+}

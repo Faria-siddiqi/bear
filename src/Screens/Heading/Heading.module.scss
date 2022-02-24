@@ -1,78 +1,102 @@
 @import '../../Index.scss';
 
-.main_heading{
+.main_heading {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  .heading_nav {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    .heading_nav{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding-top: 1rem;
-        position: fixed;
-        bottom: 25rem;
-        .head{
-            h3{
-                font-family: lemons;
-                color: #ffffff;
-                font-weight: bold;
-                font-size: 20px;
-            }
-        }
-        .links{
-            display: flex;
-            p{
-                font-family: lemons;
-                margin: 0 1rem;
-                font-weight: bold;
-                color: #ffffff;
-            }
-        }
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include media('mobile') {
+        justify-content: flex-start;
+        padding: 1rem;
     }
-    .bearImg{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10rem;
-        padding-left: 5rem;
-        img{
-            width: 400px;
-        }
+    // position: fixed;
+    // bottom: 25rem;
+    .head {
+      h3 {
+        font-family: lemons;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 20px;
+      }
     }
-    .bearContent{
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        padding-top: 14rem;
-        padding-left: 9rem;
-        h1{
-            font-family: Painless;
-            font-size: 90px;
-            color: #ffffff;
-            font-weight: bold;
-            letter-spacing: 13px;
-        }
-        button{
-            background: linear-gradient(90deg,#60cfff,#0090bd);
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: .175em;
-    line-height: 109.6%;
-    margin-left: 42px;
-    padding: 24px 36px;
-    text-transform: uppercase;
-    transition: all .4s ease-in-out;
-    border: none;
-    color: #ffffff;
-    font-weight: bold;
-    font-family: lemons;
-        }
+    .links {
+      display: flex;
+      @include media('mobile') {
+        display: none;
+      }
+      p {
+        font-family: lemons;
+        margin: 0 1rem;
+        font-weight: bold;
+        color: #ffffff;
+      }
     }
+  }
+  .bearImg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    padding-left: 5rem;
+    @include media('mobile') {
+      padding-left: 0;
+    }
+    img {
+      @include media('mobile') {
+        width: 200px;
+      }
+      width: 400px;
+      height: auto;
+      display: block;
+    }
+  }
+  .bearContent {
+    width: 100%;
+    height: 100%;
+    padding-top: 14rem;
+    padding-left: 9rem;
+    @include media('mobile') {
+      padding: 0;
+      padding-top: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-family: Painless;
+      font-size: 90px;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 13px;
+      @include media('mobile') {
+        font-size: 36px;
+      }
+    }
+    button {
+      background: linear-gradient(90deg, #60cfff, #0090bd);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.175em;
+      line-height: 109.6%;
+      margin-left: 42px;
+      padding: 24px 36px;
+      text-transform: uppercase;
+      transition: all 0.4s ease-in-out;
+      border: none;
+      color: #ffffff;
+      font-weight: bold;
+      font-family: lemons;
+      @include media('mobile') {
+        margin: 0;
+        padding: 20px 40px;
+      }
+    }
+  }
 }
