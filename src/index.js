@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import 'animate.css';
+
+
 
 ReactDOM.render(
   <React.StrictMode>

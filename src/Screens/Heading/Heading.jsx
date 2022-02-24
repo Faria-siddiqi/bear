@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Heading.module.scss';
 import { Row, Col } from 'reactstrap';
+import { Animated } from 'react-animated-css';
 
 const Heading = () => {
   let [sideBarState, setSiteBarState] = useState(false);
@@ -58,9 +59,15 @@ const Heading = () => {
           </div>
         </Col>
         <Col sm={12} md={4}>
-          <div className={styles.bearImg}>
-            <img src='Assets/bear.png' alt='Bear Pic' />
-          </div>
+          <Animated
+            animationIn='animate__fadeInLeft'
+            animationOut='fadeOut'
+            isVisible={true}
+          >
+            <div className={`${styles.bearImg}`}>
+              <img src='Assets/bear.png' alt='Bear Pic' />
+            </div>
+          </Animated>
         </Col>
         <Col sm={12} md={8}>
           <div className={styles.bearContent}>
@@ -68,7 +75,9 @@ const Heading = () => {
               LONELY BEAR <br />
               SOCIETY
             </h1>
-            <button>JOIN OUR DISCORD</button>
+            <Animated animationIn='animate__fadeInUp' animationOut="fadeIn" isVisible={true}>
+              <button className='animate__backInUp' >JOIN OUR DISCORD</button>
+            </Animated>
           </div>
         </Col>
       </Row>

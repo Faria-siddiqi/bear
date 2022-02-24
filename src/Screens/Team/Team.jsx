@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
 import styles from './Team.module.scss';
+import { Animated } from 'react-animated-css';
 
 const Team = () => {
   // subha uth ker isko sahy karna ha text wagera ko white bhi karna ha
@@ -8,12 +9,19 @@ const Team = () => {
     <div className={styles.main_team}>
       <Row>
         <Col sm={12} md={12}>
-          <div className={styles.team_head}>
-            <h2>TEAM</h2>
-            <h1>TEAM</h1>   
-          </div>
+          <Animated
+            animationIn='animate__fadeInUp'
+            animationOut='animate__fadeInUp'
+            isVisible={true}
+          >
+            <div className={styles.team_head}>
+              <h2>TEAM</h2>
+              <h1>TEAM</h1>
+            </div>
+          </Animated>
         </Col>
         <Col sm={12} md={12}>
+          <Animated isVisible={true} animationIn="animate__fadeInUpBig" animationOut="animate__fadeInUpBig">
           <div className={styles.team}>
             <div className={styles.character1}>
               <div>
@@ -63,6 +71,7 @@ const Team = () => {
               </div>
             </div>
           </div>
+          </Animated>
         </Col>
       </Row>
     </div>

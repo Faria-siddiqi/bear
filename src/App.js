@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import AboutUs from './Screens/AboutUs/AboutUs';
 import Heading from './Screens/Heading/Heading';
 import Home from './Screens/Home/Home';
@@ -27,7 +27,7 @@ const App = () => {
         <Footer />
       </div>
     </Home>
-  )
-}
+  );
+};
 
 export default App;

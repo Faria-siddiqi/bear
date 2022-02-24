@@ -3,6 +3,7 @@ import styles from './Faqs.module.scss';
 import { Row, Col } from 'reactstrap';
 import { Collapse } from 'antd';
 import './OverRide.scss';
+import { Animated } from 'react-animated-css';
 
 const { Panel } = Collapse;
 
@@ -17,38 +18,50 @@ const Faqs = () => {
 `;
   return (
     <div className={styles.main_faqs}>
-      <Row>
-        <Col sm={12} md={12}>
-          <div className={styles.faqs_head}>
+      <Animated
+        isVisible={true}
+        animationIn='animate__fadeInUp'
+        animationOut='animate__fadeInUp'
+      >
+        <Row>
+          <Col sm={12} md={12}>
+            <div className={styles.faqs_head}>
               <h1>FAQ</h1>
-          </div>
-        </Col>
-        <Col sm={12} md={12}>
-          <Collapse defaultActiveKey={['1']} onChange={callback}>
-            <Panel header='What is Lonely Bear Society?' key='1'>
-              <p>{text}</p>
-            </Panel>
-            <Panel header='When will The Lonely Bear Society launch?' key='2'>
-              <p>{text}</p>
-            </Panel>
-            <Panel header='How can I join' key='3'>
-              <p>{text}</p>
-            </Panel>
-            <Panel header='IS LONELY BEAR SOCIETY A PROMISING PROJECT?' key='3'>
-              <p>{text}</p>
-            </Panel>
-            <Panel header='Why mental health?' key='3'>
-              <p>{text}</p>
-            </Panel>
-            <Panel header='Why does the body of the bear not match the head?' key='3'>
-              <p>{text}</p>
-            </Panel>
-            <Panel header='WHAT BLOCKCHAIN IS THE PROJECT HOSTED ON?' key='3'>
-              <p>{text}</p>
-            </Panel>
-          </Collapse>
-        </Col>
-      </Row>
+            </div>
+          </Col>
+          <Col sm={12} md={12}>
+            <Collapse defaultActiveKey={['1']} onChange={callback}>
+              <Panel header='What is Lonely Bear Society?' key='1'>
+                <p>{text}</p>
+              </Panel>
+              <Panel header='When will The Lonely Bear Society launch?' key='2'>
+                <p>{text}</p>
+              </Panel>
+              <Panel header='How can I join' key='3'>
+                <p>{text}</p>
+              </Panel>
+              <Panel
+                header='IS LONELY BEAR SOCIETY A PROMISING PROJECT?'
+                key='3'
+              >
+                <p>{text}</p>
+              </Panel>
+              <Panel header='Why mental health?' key='3'>
+                <p>{text}</p>
+              </Panel>
+              <Panel
+                header='Why does the body of the bear not match the head?'
+                key='3'
+              >
+                <p>{text}</p>
+              </Panel>
+              <Panel header='WHAT BLOCKCHAIN IS THE PROJECT HOSTED ON?' key='3'>
+                <p>{text}</p>
+              </Panel>
+            </Collapse>
+          </Col>
+        </Row>
+      </Animated>
     </div>
   );
 };

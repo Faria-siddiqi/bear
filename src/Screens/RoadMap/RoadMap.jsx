@@ -1,16 +1,23 @@
 import React from 'react';
 import styles from './RoadMap.module.scss';
 import { Row, Col } from 'reactstrap';
+import { Animated } from 'react-animated-css';
 
 const RoadMap = () => {
   return (
     <div className={styles.main_road_map}>
       <Row>
         <Col sm={12} md={12}>
-          <div className={styles.road_map_head}>
-            <h2>ROADMAP</h2>
-            <h1>ROADMAP</h1>
-          </div>
+          <Animated
+            animationIn='animate__fadeInUp'
+            animationOut='animate__fadeInUp'
+            isVisible={true}
+          >
+            <div className={styles.road_map_head}>
+              <h2>ROADMAP</h2>
+              <h1>ROADMAP</h1>
+            </div>
+          </Animated>
         </Col>
         <Col xs={2} sm={2} md={2}>
           {/* <div className={styles.circle}></div> */}
@@ -19,6 +26,11 @@ const RoadMap = () => {
           </div>
         </Col>
         <Col xs={10} sm={10} md={10}>
+        <Animated
+            animationIn='animate__fadeInUp'
+            animationOut='animate__fadeInUp'
+            isVisible={true}
+          >
           <div className={styles.road_map_content}>
             <div className={styles.circle}></div>
             <div>
@@ -107,6 +119,7 @@ const RoadMap = () => {
               </p>
             </div>
           </div>
+          </Animated>
         </Col>
       </Row>
     </div>
