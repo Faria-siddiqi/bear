@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 6rem;
+    padding-top: 1rem;
     z-index: 1000;
     @include media('mobile') {
       justify-content: space-between;
@@ -45,8 +45,8 @@
       position: relative;
       bottom: 0;
     }
-    position: fixed;
-    bottom: 25rem;
+    // position: fixed;
+    // bottom: 25rem;
     .side_bar {
       display: none;
       @include media('mobile') {
