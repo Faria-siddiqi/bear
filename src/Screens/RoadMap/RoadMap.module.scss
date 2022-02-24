@@ -37,12 +37,16 @@
       right: 1.7rem;
       height: 100%;
       border-right: 2px dotted white;
+      @include media('mobile') {
+        right: 0.8rem;
+      }
     }
   }
   .road_map_content {
     width: 70%;
     margin-top: 4rem;
     bottom: 1rem;
+    margin-left: 1rem;
     position: relative;
     height: 100%;
     color: #ffffff;
@@ -50,6 +54,10 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    @include media('mobile') {
+      margin-top: 1rem;
+      width: 90%;
+    }
     h1 {
       color: #4dc3f4;
       font-size: 44px;
@@ -57,6 +65,9 @@
       letter-spacing: 0.135em;
       margin-bottom: 18px;
       font-family: Lemons-Regular;
+      @include media('mobile') {
+        font-size: 30px;
+      }
     }
     h2 {
       font-size: 24px;
@@ -64,6 +75,9 @@
       letter-spacing: 0.135em;
       margin-bottom: 24px;
       font-family: Lemons-Bold;
+      @include media('mobile') {
+        font-size: 20px;
+      }
     }
     p {
       font-size: 15px;
@@ -72,6 +86,9 @@
       line-height: 1.6em;
       margin-bottom: 38px;
       font-family: Lemons-Regular;
+      @include media('mobile') {
+        font-size: 12px;
+      }
     }
   }
   .road_map_head {

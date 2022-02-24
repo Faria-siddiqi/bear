@@ -16,6 +16,9 @@
     position: relative;
     top: 20px;
     border-top: 1px solid hsla(0, 0%, 100%, 0.12);
+    @include media('mobile') {
+      margin-top: 0;
+    }
     p {
       color: #c5d1da;
       font-size: 19px;
@@ -24,13 +27,10 @@
       text-align: center;
       text-transform: uppercase;
       font-family: Lemons-Regular;
+      @include media('mobile') {
+        font-size: 10px;
+        text-align: center;
+      }
     }
   }
 }
-
-// color: #c5d1da;
-// font-size: 19px;
-// font-weight: 400;
-// letter-spacing: .46em;
-// text-align: center;
-// text-transform: uppercase;

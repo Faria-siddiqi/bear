@@ -4,7 +4,9 @@
   height: 42px;
   position: relative;
   width: 50%;
-  
+  @include media("mobile"){
+    margin-top: 3rem;
+  }
 }
 .section_separator::before {
   background: linear-gradient(180deg, #43b1df, #0d5b95 101.19%);

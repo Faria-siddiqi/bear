@@ -20,7 +20,7 @@ const Faqs = () => {
       <Row>
         <Col sm={12} md={12}>
           <div className={styles.faqs_head}>
-              <h1>FAQS</h1>
+              <h1>FAQ</h1>
           </div>
         </Col>
         <Col sm={12} md={12}>
