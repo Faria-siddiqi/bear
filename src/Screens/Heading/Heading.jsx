@@ -2,52 +2,54 @@ import React, { useState } from 'react';
 import styles from './Heading.module.scss';
 import { Row, Col } from 'reactstrap';
 import { Animated } from 'react-animated-css';
+import { useWindowScrollPositions } from '../../Components/Scrolls/Scrolls';
+import './OverRide.scss';
 
 const Heading = () => {
   let [sideBarState, setSiteBarState] = useState(false);
+  const { scrollX, scrollY } = useWindowScrollPositions();
+
   function sidebarOpener() {
     setSiteBarState(true);
   }
   function sidebarCloser() {
     setSiteBarState(false);
   }
+
   return (
     <div className={styles.main_heading}>
-      {sideBarState ? (
-        <div className={styles.sidebar}>
-          <div className={styles.lists}>
-            <p>ABOUT US</p>
-            <p>WORKS</p>
-            <p>ARTIST</p>
-            <p>ROADMAP</p>
-            <p>FAQ</p>
-            <p>JOIN</p>
-          </div>
-          <div>
-            <img
-              src='Assets/sidebar.png'
-              alt=''
-              onClick={sideBarState ? sidebarCloser : sidebarOpener}
-            />
-          </div>
-        </div>
-      ) : null}
       <Row>
         <Col sm={12} md={12}>
-          <div className={styles.heading_nav}>
+          <div
+            className={`${styles.heading_nav} ${
+              scrollY > 20 ? 'scrollable' : ''
+            }`}
+          >
             <div className={styles.head}>
               <h3>
                 LONELY BEAR <br />
                 SOCIETY
               </h3>
             </div>
-            <div className={styles.links}>
-              <p>ABOUT US</p>
-              <p>WORKS</p>
-              <p>ARTIST</p>
-              <p>ROADMAP</p>
-              <p>FAQ</p>
-              <p>JOIN</p>
+            <div className={`${styles.links}`}>
+              <p>
+                <a>ABOUT US</a>
+              </p>
+              <p>
+                <a>WORKS</a>
+              </p>
+              <p>
+                <a>ARTIST</a>
+              </p>
+              <p>
+                <a>ROADMAP</a>
+              </p>
+              <p>
+                <a>FAQ</a>
+              </p>
+              <p>
+                <a>JOIN</a>
+              </p>
             </div>
             <div className={styles.side_bar}>
               <img
@@ -56,6 +58,25 @@ const Heading = () => {
                 onClick={sideBarState ? sidebarCloser : sidebarOpener}
               />
             </div>
+            {sideBarState ? (
+              <div className={styles.sidebar}>
+                <div className={styles.lists}>
+                  <p>ABOUT US</p>
+                  <p>WORKS</p>
+                  <p>ARTIST</p>
+                  <p>ROADMAP</p>
+                  <p>FAQ</p>
+                  <p>JOIN</p>
+                </div>
+                <div>
+                  <img
+                    src='Assets/sidebar.png'
+                    alt=''
+                    onClick={sideBarState ? sidebarCloser : sidebarOpener}
+                  />
+                </div>
+              </div>
+            ) : null}
           </div>
         </Col>
         <Col sm={12} md={4}>
@@ -75,8 +96,14 @@ const Heading = () => {
               LONELY BEAR <br />
               SOCIETY
             </h1>
-            <Animated animationIn='animate__fadeInUp' animationOut="fadeIn" isVisible={true}>
-              <button className='animate__backInUp' >JOIN OUR DISCORD</button>
+            <Animated
+              animationIn='animate__fadeInUp'
+              animationOut='fadeIn'
+              isVisible={true}
+            >
+              <button className='animate__backInUp'>
+                <span>JOIN OUR DISCORD</span>
+              </button>
             </Animated>
           </div>
         </Col>

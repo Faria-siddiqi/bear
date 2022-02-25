@@ -4,7 +4,8 @@
   height: 42px;
   position: relative;
   width: 50%;
-  @include media("mobile"){
+  margin-top: 2rem;
+  @include media('mobile') {
     margin-top: 3rem;
   }
 }
@@ -13,7 +14,7 @@
   content: '';
   height: 100%;
   position: absolute;
-  right: 0;
+  right: 0 !important;
   top: 0;
   width: 3px;
   z-index: 9;
@@ -59,4 +60,7 @@
   position: absolute;
   top: 50%;
   width: 100%;
+  right: -50%;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
 }

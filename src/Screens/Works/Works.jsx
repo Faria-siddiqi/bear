@@ -73,7 +73,9 @@ const Works = () => {
                 <p>We are Lonely Bear but we are not lonely</p>
               </div>
               <div>
-                <button>JOIN THE DISCORD</button>
+                <button>
+                  <span>JOIN THE DISCORD</span>
+                </button>
               </div>
             </div>
           </Animated>

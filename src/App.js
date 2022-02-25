@@ -18,7 +18,9 @@ const App = () => {
         <Heading />
         <AboutUs />
         <Works />
+        <Line />
         <Team />
+        <RightLine />
         <RoadMap />
         <Line />
         <Faqs />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Faqs.module.scss';
 import { Row, Col } from 'reactstrap';
 import { Collapse } from 'antd';
@@ -16,6 +16,56 @@ const Faqs = () => {
   Known for its loyalty and faithfulness,
   it can be found as a welcome guest in many households across the world.
 `;
+
+  // useEffect(() => {
+  //   let div = document.getElementsByClassName('ant-collapse-header')[0];
+  //   console.log(div);
+  //   let head1 = document.createElement('div');
+  //   let h3Node1 = document.createTextNode('+');
+  //   let head2 = document.createElement('div');
+  //   let h3Node2 = document.createTextNode(' ');
+  //   let head3 = document.createElement('div');
+  //   let h3Node3 = document.createTextNode(' ');
+  //   let head4 = document.createElement('div');
+  //   let h3Node4 = document.createTextNode(' ');
+  //   let head5 = document.createElement('div');
+  //   let h3Node5 = document.createTextNode(' ');
+  //   let head6 = document.createElement('div');
+  //   let h3Node6 = document.createTextNode(' ');
+  //   let head7 = document.createElement('div');
+  //   let h3Node7 = document.createTextNode(' ');
+  //   let head8 = document.createElement('div');
+  //   let h3Node8 = document.createTextNode(' ');
+  //   let head9 = document.createElement('div');
+  //   let h3Node9 = document.createTextNode(' ');
+  //   let head10 = document.createElement('div');
+  //   let h3Node10 = document.createTextNode('+');
+
+  //   head1.appendChild(h3Node1);
+  //   head2.appendChild(h3Node2);
+  //   head3.appendChild(h3Node3);
+  //   head4.appendChild(h3Node4);
+  //   head5.appendChild(h3Node5);
+  //   head6.appendChild(h3Node6);
+  //   head6.appendChild(h3Node7);
+  //   head6.appendChild(h3Node8);
+  //   head6.appendChild(h3Node9);
+  //   head6.appendChild(h3Node10);
+
+
+  //   div.appendChild(head1);
+  //   div.appendChild(head2);
+  //   div.appendChild(head3);
+  //   div.appendChild(head4);
+  //   div.appendChild(head5);
+  //   div.appendChild(head6);
+  //   div.appendChild(head7);
+  //   div.appendChild(head8);
+  //   div.appendChild(head9);
+  //   div.appendChild(head10);
+
+  // }, []);
+
   return (
     <div className={styles.main_faqs}>
       <Animated
@@ -42,20 +92,20 @@ const Faqs = () => {
               </Panel>
               <Panel
                 header='IS LONELY BEAR SOCIETY A PROMISING PROJECT?'
-                key='3'
+                key='4'
               >
                 <p>{text}</p>
               </Panel>
-              <Panel header='Why mental health?' key='3'>
+              <Panel header='Why mental health?' key='5'>
                 <p>{text}</p>
               </Panel>
               <Panel
                 header='Why does the body of the bear not match the head?'
-                key='3'
+                key='6'
               >
                 <p>{text}</p>
               </Panel>
-              <Panel header='WHAT BLOCKCHAIN IS THE PROJECT HOSTED ON?' key='3'>
+              <Panel header='WHAT BLOCKCHAIN IS THE PROJECT HOSTED ON?' key='7'>
                 <p>{text}</p>
               </Panel>
             </Collapse>
