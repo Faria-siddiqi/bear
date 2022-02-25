@@ -49,7 +49,6 @@
     z-index: 1000;
     position: fixed;
     top: 0;
-    padding: 20px 0;
     @include media('mobile') {
       justify-content: space-between;
       padding: 1rem 1rem;
@@ -68,6 +67,8 @@
       }
     }
     .head {
+      position: relative;
+      top: 5px;
       h3 {
         font-family: lemons;
         color: #ffffff;
@@ -86,6 +87,10 @@
         font-weight: bold;
         position: relative;
         color: #ffffff;
+        cursor: pointer;
+        a{
+          color: #ffffff;
+        }
         a:hover {
           color: linear-gradient(90deg, #60cfff, #0090bd);
           transition: all 0.3s ease-in-out;

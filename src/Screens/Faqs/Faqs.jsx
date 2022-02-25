@@ -52,7 +52,6 @@ const Faqs = () => {
   //   head6.appendChild(h3Node9);
   //   head6.appendChild(h3Node10);
 
-
   //   div.appendChild(head1);
   //   div.appendChild(head2);
   //   div.appendChild(head3);
@@ -67,7 +66,7 @@ const Faqs = () => {
   // }, []);
 
   return (
-    <div className={styles.main_faqs}>
+    <div className={styles.main_faqs} id="faqss">
       <Animated
         isVisible={true}
         animationIn='animate__fadeInUp'
@@ -79,7 +78,7 @@ const Faqs = () => {
               <h1>FAQ</h1>
             </div>
           </Col>
-          <Col sm={12} md={12}>
+          <Col sm={12} md={12} id='faqs'>
             <Collapse defaultActiveKey={['1']} onChange={callback}>
               <Panel header='What is Lonely Bear Society?' key='1'>
                 <p>{text}</p>

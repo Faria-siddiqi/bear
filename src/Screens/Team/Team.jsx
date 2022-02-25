@@ -6,7 +6,7 @@ import { Animated } from 'react-animated-css';
 const Team = () => {
   // subha uth ker isko sahy karna ha text wagera ko white bhi karna ha
   return (
-    <div className={styles.main_team}>
+    <div className={styles.main_team}id="teams">
       <Row>
         <Col sm={12} md={12}>
           <Animated

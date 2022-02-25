@@ -71,9 +71,9 @@
       width: 350px;
       height: 100%;
       color: #ffffff;
-      padding: 0 1rem;
-      position: relative;
-      bottom: 1.5rem;
+      // padding: 0 1rem;
+      // position: relative;
+      // bottom: 1.5rem;
       @include media('mobile') {
         bottom: 0;
       }

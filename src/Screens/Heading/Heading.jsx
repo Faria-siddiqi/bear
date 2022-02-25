@@ -4,8 +4,10 @@ import { Row, Col } from 'reactstrap';
 import { Animated } from 'react-animated-css';
 import { useWindowScrollPositions } from '../../Components/Scrolls/Scrolls';
 import './OverRide.scss';
+import { useLocation } from 'react-router-dom';
 
 const Heading = () => {
+  // let location = useLocation();
   let [sideBarState, setSiteBarState] = useState(false);
   const { scrollX, scrollY } = useWindowScrollPositions();
 
@@ -15,6 +17,8 @@ const Heading = () => {
   function sidebarCloser() {
     setSiteBarState(false);
   }
+
+  // console.log(location)
 
   return (
     <div className={styles.main_heading}>
@@ -32,21 +36,21 @@ const Heading = () => {
               </h3>
             </div>
             <div className={`${styles.links}`}>
-              <p>
-                <a>ABOUT US</a>
-              </p>
-              <p>
-                <a>WORKS</a>
-              </p>
-              <p>
-                <a>ARTIST</a>
-              </p>
-              <p>
-                <a>ROADMAP</a>
-              </p>
-              <p>
-                <a>FAQ</a>
-              </p>
+                <p>
+                  <a href="#aboutus">ABOUT US</a>
+                </p>
+                <p>
+                  <a href="#works">WORKS</a>
+                </p>
+                <p>
+                  <a href="#teams">ARTIST</a>
+                </p>
+                <p>
+                  <a href="#roadmaps">ROADMAP</a>
+                </p>
+                <p>
+                  <a href="#faqss">FAQ</a>
+                </p>
               <p>
                 <a>JOIN</a>
               </p>

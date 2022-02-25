@@ -20,7 +20,7 @@ const Works = () => {
     'Assets/slideImg1.png',
   ];
   return (
-    <div className={styles.main_works}>
+    <div className={styles.main_works} id="works">
       <Row>
         <Col sm={12} md={12}>
           <div className={styles.works_head}>

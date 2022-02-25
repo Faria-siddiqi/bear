@@ -5,7 +5,7 @@ import { Animated } from 'react-animated-css';
 
 const AboutUs = () => {
   return (
-    <div className={styles.main_about}>
+    <div className={styles.main_about} id="aboutus">
       <Row>
         <Col sm={12} md={8}>
           <Animated
