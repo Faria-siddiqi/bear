@@ -22,7 +22,7 @@ const Heading = () => {
   }, [scrollY]);
 
   return (
-    <div className={styles.main_heading} id="home">
+    <div className={styles.main_heading} id='home'>
       <Row>
         <Col sm={12} md={12}>
           <div
@@ -90,12 +90,44 @@ const Heading = () => {
             {sideBarState ? (
               <div className={styles.sidebar}>
                 <div className={styles.lists}>
-                  <p>ABOUT US</p>
-                  <p>WORKS</p>
-                  <p>ARTIST</p>
-                  <p>ROADMAP</p>
-                  <p>FAQ</p>
-                  <p>JOIN</p>
+                  <p
+                    className={`${
+                      activeState === '#aboutus' ? styles.active_links_mobile : ''
+                    }`}
+                  >
+                    <a href='#aboutus'>ABOUT US</a>
+                  </p>
+                  <p
+                    className={`${
+                      activeState === '#works' ? styles.active_links_mobile : ''
+                    }`}
+                  >
+                    <a href='#works'>WORKS</a>
+                  </p>
+                  <p
+                    className={`${
+                      activeState === '#teams' ? styles.active_links_mobile : ''
+                    }`}
+                  >
+                    <a href='#teams'>ARTIST</a>
+                  </p>
+                  <p
+                    className={`${
+                      activeState === '#roadmaps' ? styles.active_links_mobile : ''
+                    }`}
+                  >
+                    <a href='#roadmaps'>ROADMAP</a>
+                  </p>
+                  <p
+                    className={`${
+                      activeState === '#faqss' ? styles.active_links_mobile : ''
+                    }`}
+                  >
+                    <a href='#faqss'>FAQ</a>
+                  </p>
+                  <p>
+                    <a>JOIN</a>
+                  </p>
                 </div>
                 <div>
                   <img
