@@ -16,7 +16,7 @@
   align-items: flex-start;
   padding: 2rem;
   z-index: 1000;
-  img{
+  img {
     width: 2.5rem;
     position: relative;
     bottom: 0.45rem;
@@ -60,7 +60,7 @@
       @include media('mobile') {
         display: block;
       }
-      img{
+      img {
         width: 2.5rem;
         position: relative;
         bottom: 0.3rem;
@@ -69,12 +69,40 @@
     .head {
       position: relative;
       top: 5px;
+      a{
+        color: #ffffff;
+      }
       h3 {
         font-family: lemons;
         color: #ffffff;
         font-weight: bold;
         font-size: 20px;
       }
+    }
+    .active_links {
+      font-family: lemons;
+      margin: 0 1rem;
+      font-weight: bold;
+      position: relative;
+      color: #ffffff;
+      cursor: pointer;
+      a {
+        color: linear-gradient(90deg, #60cfff, #0090bd) !important;
+        transition: all 0.3s ease-in-out !important;
+        color: #60cfff !important;
+      }
+      p,
+      a:before {
+        content: '' ;
+        top: 110% ;
+        position: absolute ;
+        left: 0 ;
+        width: 100% !important;
+        height: 2px ;
+        border-bottom: 2px solid #60cfff ;
+        transition: all 0.3s ease-in-out ;
+      }
+
     }
     .links {
       display: flex;
@@ -88,7 +116,7 @@
         position: relative;
         color: #ffffff;
         cursor: pointer;
-        a{
+        a {
           color: #ffffff;
         }
         a:hover {

@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Heading.module.scss';
 import { Row, Col } from 'reactstrap';
 import { Animated } from 'react-animated-css';
 import { useWindowScrollPositions } from '../../Components/Scrolls/Scrolls';
 import './OverRide.scss';
-import { useLocation } from 'react-router-dom';
 
 const Heading = () => {
-  // let location = useLocation();
   let [sideBarState, setSiteBarState] = useState(false);
   const { scrollX, scrollY } = useWindowScrollPositions();
+  let [activeState, setActiveState] = useState('');
 
   function sidebarOpener() {
     setSiteBarState(true);
@@ -18,10 +17,12 @@ const Heading = () => {
     setSiteBarState(false);
   }
 
-  // console.log(location)
+  useEffect(() => {
+    setActiveState(window.location.hash);
+  }, [scrollY]);
 
   return (
-    <div className={styles.main_heading}>
+    <div className={styles.main_heading} id="home">
       <Row>
         <Col sm={12} md={12}>
           <div
@@ -31,30 +32,54 @@ const Heading = () => {
           >
             <div className={styles.head}>
               <h3>
-                LONELY BEAR <br />
-                SOCIETY
+                <a href='#home'>
+                  LONELY BEAR <br />
+                  SOCIETY
+                </a>
               </h3>
             </div>
+            {/* <div> */}
             <div className={`${styles.links}`}>
-                <p>
-                  <a href="#aboutus">ABOUT US</a>
-                </p>
-                <p>
-                  <a href="#works">WORKS</a>
-                </p>
-                <p>
-                  <a href="#teams">ARTIST</a>
-                </p>
-                <p>
-                  <a href="#roadmaps">ROADMAP</a>
-                </p>
-                <p>
-                  <a href="#faqss">FAQ</a>
-                </p>
+              <p
+                className={`${
+                  activeState === '#aboutus' ? styles.active_links : ''
+                }`}
+              >
+                <a href='#aboutus'>ABOUT US</a>
+              </p>
+              <p
+                className={`${
+                  activeState === '#works' ? styles.active_links : ''
+                }`}
+              >
+                <a href='#works'>WORKS</a>
+              </p>
+              <p
+                className={`${
+                  activeState === '#teams' ? styles.active_links : ''
+                }`}
+              >
+                <a href='#teams'>ARTIST</a>
+              </p>
+              <p
+                className={`${
+                  activeState === '#roadmaps' ? styles.active_links : ''
+                }`}
+              >
+                <a href='#roadmaps'>ROADMAP</a>
+              </p>
+              <p
+                className={`${
+                  activeState === '#faqss' ? styles.active_links : ''
+                }`}
+              >
+                <a href='#faqss'>FAQ</a>
+              </p>
               <p>
                 <a>JOIN</a>
               </p>
             </div>
+            {/* </div> */}
             <div className={styles.side_bar}>
               <img
                 src='Assets/sidebar.png'
