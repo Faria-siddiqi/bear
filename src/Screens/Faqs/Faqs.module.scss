@@ -17,8 +17,8 @@
       color: #ffffff;
       font-family: Lemons-Bold;
       @include media('mobile') {
+        font-size: 30px;
       }
-      font-size: 30px;
     }
   }
 }
