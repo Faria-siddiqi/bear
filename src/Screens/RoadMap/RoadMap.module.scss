@@ -65,12 +65,13 @@
     position: relative;
     .dottedline {
       position: relative;
-      top: 1rem;
+      top: 1.3rem;
       right: 0.9rem;
       height: 90%;
       border-right: 2px dotted white;
       @include media('mobile') {
         right: 0.8rem;
+        top: 0;
       }
     }
   }

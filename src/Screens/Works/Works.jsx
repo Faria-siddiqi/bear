@@ -39,43 +39,34 @@ const Works = () => {
             animationOut='animate__fadeInUpBig'
           >
             <div className={styles.joining}>
-              <div>
-                <h1>
-                  HOW CAN I <span>JOIN THEM?</span>
-                </h1>
+              <div className={styles.firstSection}>
+                <p>3333/3333 SOLD</p>
               </div>
-              <div>
-                <p>
-                  Join our Discord server for a whitelist. We still have spots
-                  left. But they will all be filled by early supporters of the
-                  project who are ready to mint once we announce the launch. If
-                  you, too, want to be among the few able to mint their piece of
-                  digital art and contribute to the mental wellness society.
-                </p>
+              <div className={styles.heading}>
+                <h1>Public Mint</h1>
               </div>
-              <div>
-                <p>
-                  Join the Bunnies To Official. By the end of April 2022,
-                  everything will be set in stone. That's the date the Bunnies
-                  sends out its first VIP invitations. And you can bring a bear
-                  to your wallet and everyone you care about. Once 8888 are
-                  minted, the early supporters of this project will be heavily
-                  rewarded.
-                </p>
+              <div className={styles.content1}>
+                <p>Public Sale Is Live</p>
               </div>
-              <div>
-                <p>
-                  We are spreading mental awareness in a new and different way,
-                  join us to make a difference in this world
-                </p>
+              <div className={styles.content2}>
+                <a href='#'>View on Opensea</a>
               </div>
-              <div>
-                <p>We are Bunnies but we are not official</p>
+              <div className={styles.buttons}>
+                <button>-</button>
+                <input type='text' name='' id='' />
+                <button>+</button>
+                <button className={styles.maxBtn}>Max</button>
               </div>
-              <div>
-                <a href='https://discord.gg/WYDmSGhJ9u' target='_blank'>
-                  <button>JOIN THE DISCORD</button>
-                </a>
+              <div className={styles.mintButton}>
+                <button>Mint Bears</button>
+              </div>
+              <div className={styles.supplyInfo}>
+                <p>.03 Eth</p>
+                <p>3333 Supply</p>
+              </div>
+              <div className={styles.transacInfo}>
+                <p>Max Mints Per Transaction: 5</p>
+                <p>Max Mints Per Wallet : 20</p>
               </div>
             </div>
           </Animated>
