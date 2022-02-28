@@ -78,6 +78,7 @@
     z-index: 1000;
     position: fixed;
     top: 0;
+    transition: all 0.5s ease-in-out !important;
     @include media('mobile') {
       justify-content: space-between;
       padding: 1rem 1rem;

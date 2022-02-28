@@ -20,7 +20,9 @@ const Partners = () => {
               </h3>
             </div>
             <div className={styles.partners_icons}>
-              <img src='Assets/discord.png' alt='' />
+              <a href="https://discord.gg/WYDmSGhJ9u" target='_blank'>
+                <img src='Assets/discord.png' alt='' />
+              </a>
             </div>
             <div className={styles.social_icons}>
               <img src='Assets/insta.png' alt='' />

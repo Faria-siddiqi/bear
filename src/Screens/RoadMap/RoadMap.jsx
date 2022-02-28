@@ -5,7 +5,7 @@ import { Animated } from 'react-animated-css';
 
 const RoadMap = () => {
   return (
-    <div className={styles.main_road_map} id="roadmaps">
+    <div className={styles.main_road_map} id='roadmaps'>
       <Row>
         <Col sm={12} md={12}>
           <Animated
@@ -126,9 +126,15 @@ const RoadMap = () => {
                   the metaverse.
                 </p>
               </div>
+              <div className={styles.bottomArrow}>
+                <img src='Assets/downarrow.png' alt='' />
+              </div>
             </div>
           </Animated>
         </Col>
+        {/* <Col sm={2} md={2} xs={2}>
+        </Col>
+        <Col sm={10} md={10} xs={10}></Col> */}
       </Row>
     </div>
   );

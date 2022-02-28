@@ -20,7 +20,7 @@ const Works = () => {
     'Assets/art4.png',
   ];
   return (
-    <div className={styles.main_works} id="works">
+    <div className={styles.main_works} id='works'>
       <Row>
         <Col sm={12} md={12}>
           <div className={styles.works_head}>
@@ -56,8 +56,9 @@ const Works = () => {
               <div>
                 <p>
                   Join the Bunnies To Official. By the end of April 2022,
-                  everything will be set in stone. That's the date the Bunnies sends out its first VIP invitations. And you can bring a
-                  bear to your wallet and everyone you care about. Once 8888 are
+                  everything will be set in stone. That's the date the Bunnies
+                  sends out its first VIP invitations. And you can bring a bear
+                  to your wallet and everyone you care about. Once 8888 are
                   minted, the early supporters of this project will be heavily
                   rewarded.
                 </p>
@@ -72,9 +73,9 @@ const Works = () => {
                 <p>We are Bunnies but we are not official</p>
               </div>
               <div>
-                <button>
-                  <a href='https://discord.gg/WYDmSGhJ9u' target='_blank'>JOIN THE DISCORD</a>
-                </button>
+                <a href='https://discord.gg/WYDmSGhJ9u' target='_blank'>
+                  <button>JOIN THE DISCORD</button>
+                </a>
               </div>
             </div>
           </Animated>
