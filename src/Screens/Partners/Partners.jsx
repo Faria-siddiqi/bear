@@ -8,15 +8,15 @@ const Partners = () => {
       <Row>
         <Col sm={12} md={12}>
           <div className={styles.img_container}>
-            <img src='Assets/bottompage.png' alt='' />
+            <img src='Assets/mark.png' alt='' />
           </div>
         </Col>
         <Col sm={12} md={12}>
           <div className={styles.partners}>
             <div className={styles.head}>
               <h3>
-                Lonely <br />
-                Bear Society
+                Bunnies <br />
+                To Official
               </h3>
             </div>
             <div className={styles.partners_icons}>

@@ -23,8 +23,8 @@ const App = () => {
         <RightLine />
         <RoadMap />
         <Line />
-        <Faqs />
-        <RightLine />
+        {/* <Faqs /> */}
+        {/* <RightLine /> */}
         <Partners />
         <Footer />
       </div>

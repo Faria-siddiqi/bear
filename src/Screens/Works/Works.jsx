@@ -6,18 +6,18 @@ import { Animated } from 'react-animated-css';
 
 const Works = () => {
   let imgArr = [
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
-    'Assets/slideImg1.png',
+    'Assets/art1.png',
+    'Assets/art2.png',
+    'Assets/art3.png',
+    'Assets/art4.png',
+    'Assets/art1.png',
+    'Assets/art2.png',
+    'Assets/art3.png',
+    'Assets/art4.png',
+    'Assets/art1.png',
+    'Assets/art2.png',
+    'Assets/art3.png',
+    'Assets/art4.png',
   ];
   return (
     <div className={styles.main_works} id="works">
@@ -55,9 +55,8 @@ const Works = () => {
               </div>
               <div>
                 <p>
-                  Join the Lonely Bear Society. By the end of April 2022,
-                  everything will be set in stone. That's the date the Lonely
-                  Bears sends out its first VIP invitations. And you can bring a
+                  Join the Bunnies To Official. By the end of April 2022,
+                  everything will be set in stone. That's the date the Bunnies sends out its first VIP invitations. And you can bring a
                   bear to your wallet and everyone you care about. Once 8888 are
                   minted, the early supporters of this project will be heavily
                   rewarded.
@@ -70,11 +69,11 @@ const Works = () => {
                 </p>
               </div>
               <div>
-                <p>We are Lonely Bear but we are not lonely</p>
+                <p>We are Bunnies but we are not official</p>
               </div>
               <div>
                 <button>
-                  <span>JOIN THE DISCORD</span>
+                  <a href='https://discord.gg/WYDmSGhJ9u' target='_blank'>JOIN THE DISCORD</a>
                 </button>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { Animated } from 'react-animated-css';
 import { useWindowScrollPositions } from '../../Components/Scrolls/Scrolls';
 import './OverRide.scss';
 
+
 const Heading = () => {
   let [sideBarState, setSiteBarState] = useState(false);
   const { scrollX, scrollY } = useWindowScrollPositions();
@@ -31,12 +32,13 @@ const Heading = () => {
             }`}
           >
             <div className={styles.head}>
-              <h3>
-                <a href='#home'>
-                  LONELY BEAR <br />
-                  SOCIETY
-                </a>
-              </h3>
+              <a href='#home' style={{display: 'flex'}}>
+                <img src='Assets/logo.png' alt='logo' className={styles.logo_image}/>
+                  <h3 className={styles.logo_cover}>
+                    BUNNIES<br />
+                    TO OFFICIAL
+                  </h3>
+              </a>
             </div>
             {/* <div> */}
             <div className={`${styles.links}`}>
@@ -68,7 +70,7 @@ const Heading = () => {
               >
                 <a href='#roadmaps'>ROADMAP</a>
               </p>
-              <p
+              {/* <p
                 className={`${
                   activeState === '#faqss' ? styles.active_links : ''
                 }`}
@@ -77,7 +79,7 @@ const Heading = () => {
               </p>
               <p>
                 <a>JOIN</a>
-              </p>
+              </p> */}
             </div>
             {/* </div> */}
             <div className={styles.side_bar}>
@@ -147,15 +149,15 @@ const Heading = () => {
             isVisible={true}
           >
             <div className={`${styles.bearImg}`}>
-              <img src='Assets/bear.png' alt='Bear Pic' />
+              <img src='Assets/rabbit3.png' alt='Bear Pic' />
             </div>
           </Animated>
         </Col>
         <Col sm={12} md={8}>
-          <div className={styles.bearContent}>
+          <div className={styles.bunniesContent}>
             <h1>
-              LONELY BEAR <br />
-              SOCIETY
+              BUNNIES <br />
+              TO OFFICIAL
             </h1>
             <Animated
               animationIn='animate__fadeInUp'
@@ -163,7 +165,7 @@ const Heading = () => {
               isVisible={true}
             >
               <button className='animate__backInUp'>
-                <span>JOIN OUR DISCORD</span>
+                <a href='https://discord.gg/WYDmSGhJ9u' target="_blank">JOIN OUR DISCORD</a>
               </button>
             </Animated>
           </div>

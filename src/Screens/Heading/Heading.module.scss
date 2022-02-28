@@ -96,8 +96,9 @@
       }
     }
     .head {
+      display: flex;
       position: relative;
-      top: 5px;
+      // top: 5px;
       a {
         color: #ffffff;
       }
@@ -107,6 +108,14 @@
         font-weight: bold;
         font-size: 20px;
       }
+    }
+
+    .logo_image {
+      width: 10%;
+    }
+    .logo_cover {
+      margin-top: auto;
+      margin-bottom: auto;
     }
 
     .active_links {
@@ -201,10 +210,10 @@
       display: block;
     }
   }
-  .bearContent {
+  .bunniesContent {
     width: 100%;
     height: 100%;
-    padding-top: 14rem;
+    padding-top: 20rem;
     padding-left: 9rem;
     @include media('mobile') {
       padding: 0;

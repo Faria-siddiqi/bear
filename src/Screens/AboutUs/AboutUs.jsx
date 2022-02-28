@@ -19,7 +19,7 @@ const AboutUs = () => {
                   ABOUT <span>US</span>
                 </h1>
                 <p>
-                  Lonely Bear Society is a community-driven NFT project. The
+                  Bunnies To Official is a community-driven NFT project. The
                   collection consists of over a hundred exciting traits of
                   faces, hair, hats, body, and backgrounds to ensure each bear
                   is a unique, non-fungible token on the Ethereum blockchain.ß
@@ -28,7 +28,7 @@ const AboutUs = () => {
               <div>
                 <h2>LONELY SOCIETY FOUNDATION</h2>
                 <p>
-                  A portion of the sales from the Lonely Bear Society
+                  A portion of the sales from the Bunnies To Official
                   collections will be used to put up a non-profit,
                   non-governmental organization (NGO) called Lonely Society
                   Foundation. The main goal of the NGO is to set up physical
@@ -56,7 +56,7 @@ const AboutUs = () => {
             isVisible={true}
           >
             <div className={styles.sideBear}>
-              <img src='Assets/sidebear.png' alt='sidebear' />
+              <img src='Assets/rabbit4.png' alt='sidebear' />
             </div>
           </Animated>
         </Col>

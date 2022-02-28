@@ -25,7 +25,7 @@ const Team = () => {
           <div className={styles.team}>
             <div className={styles.character1}>
               <div>
-                <img src='Assets/teambear1.png' alt='teambear1' />
+                <img src='Assets/rabbit2.png' alt='art1' />
               </div>
               <div>
                 <h3>FOUNDER HAN</h3>
@@ -43,7 +43,7 @@ const Team = () => {
             </div>
             <div className={styles.character2}>
               <div>
-                <img src='Assets/teambear2.png' alt='teambear2' />
+                <img src='Assets/rabbit3.png' alt='art2' />
               </div>
               <div>
                 <h3>MARKETING:@TEAMGOATNFT</h3>
@@ -58,7 +58,7 @@ const Team = () => {
             </div>
             <div className={styles.character3}>
               <div>
-                <img src='Assets/teambear3.png' alt='teambear3' />
+                <img src='Assets/rabbit4.png' alt='art3' />
               </div>
               <div>
                 <h3>Developer: Tom</h3>
