@@ -15,7 +15,7 @@ export default function SliderComponent({ imgs }) {
         cssEase: "linear"
     };
     return (
-        <div>
+        <div className={styles.main_slider}>
             <Slider {...settings}>
                 {
                     imgs.map((item,index)=>(

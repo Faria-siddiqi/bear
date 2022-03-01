@@ -3,12 +3,21 @@
 .main_works {
   width: 100%;
   height: 100%;
+  // height: 30rem;
   position: relative;
   overflow: hidden;
+  // padding: 4rem 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 24, 24, 0.01),
+    #242323,
+    #222222,
+    rgba(255, 165, 0, 0.01)
+  );
   @include media('mobile') {
     padding-bottom: 5rem;
   }
-  
+
   .works_head {
     width: 100%;
     height: 100%;
@@ -42,7 +51,7 @@
     flex-direction: column;
     padding: 4rem;
     // margin: 0 auto;
-    margin-top: 7rem;
+    // margin-top: 7rem;
     // background-color: #ffffff;
     @include media('mobile') {
       width: 90%;
@@ -115,7 +124,7 @@
         font-weight: 900;
         width: 3em;
         height: 2.5em;
-        transition: all .5s ease!important;
+        transition: all 0.5s ease !important;
       }
 
       h1 {
@@ -130,7 +139,7 @@
       button:hover {
         background-color: rgba(0, 0, 0, 0.65) !important;
         color: #60cfff;
-        transition: all .5s ease!important;
+        transition: all 0.5s ease !important;
       }
 
       input {
@@ -157,12 +166,12 @@
         font-family: Lemons-Regular;
         font-size: 2em;
         border: none;
-        transition: all .5s ease!important;
+        transition: all 0.5s ease !important;
       }
       button:hover {
         background-color: rgba(0, 0, 0, 0.65) !important;
         color: #60cfff;
-        transition: all .5s ease!important;
+        transition: all 0.5s ease !important;
       }
     }
     .supplyInfo {

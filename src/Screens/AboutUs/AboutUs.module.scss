@@ -1,13 +1,31 @@
 @import '../../Index.scss';
 
-
 .main_about {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(255,165,0, 0.01), rgba(255,165,0, 0.2), rgba(255,165,0, 0.4), rgba(255,165,0, 0.5), rgba(255,165,0, 0.6), rgba(255,165,0, 0.5), rgba(255,165,0, 0.4), rgba(255,165,0, 0.2), rgba(255,165,0, 0.01));
+  // background: rgb(255, 151, 28);
+  // background: linear-gradient(
+  //   345deg,
+  //   rgba(255, 151, 28, 1) 50%,
+  //   rgba(255, 112, 0, 1) 50%
+  // );
+  // background-image: linear-gradient(to bottom, rgba(255,165,0, 0.01), rgba(255,165,0, 0.2), rgba(255,165,0, 0.4), rgba(255,165,0, 0.5), rgba(255,165,0, 0.6), rgba(255,165,0, 0.5), rgba(255,165,0, 0.4), rgba(255,165,0, 0.2), rgba(255,165,0, 0.01));
   // margin-top: 10rem;
+  // background: rgb(255, 151, 28);
+  // background: linear-gradient(
+  //   345deg,
+  //   rgba(255, 151, 28, 0.4780287114845938) 0%,
+  //   rgba(255, 112, 0, 1) 100%
+  // );
+  // background: linear-gradient(
+  //   to bottom,
+  //   rgba(24, 24, 24, 0.01),
+  //   rgb(248, 182, 102),
+  //   rgb(252, 186, 105),
+  //   rgba(255, 165, 0, 0.01)
+  // );
   .about_content {
     width: 100%;
     height: 100%;
@@ -17,6 +35,7 @@
     flex-direction: column;
     padding-left: 10rem;
     padding-top: 5rem;
+    padding-bottom: 5rem;
     @include media('mobile') {
       padding-left: 1rem;
     }

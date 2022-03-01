@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Row } from 'reactstrap';
 import styles from './AboutUs.module.scss';
 import { Animated } from 'react-animated-css';
+import { useWindowScrollPositions } from '../../Components/Scrolls/Scrolls';
+import './OverRide.scss';
 
 const AboutUs = () => {
+  const { scrollX, scrollY } = useWindowScrollPositions();
   return (
-    <div className={styles.main_about} id="aboutus">
+    <div className={`${styles.main_about} ${scrollY >= 328 ? "animatedGradient" : ""}`} id="aboutus">
       <Row>
         <Col sm={12} md={8}>
           <Animated
