@@ -1,31 +1,22 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react';
 import styles from './Slider.module.scss';
-import './OverRide.scss'
+import './OverRide.scss';
+import Marquee from 'react-fast-marquee';
 
 export default function SliderComponent({ imgs }) {
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 5000,
-        autoplaySpeed: 2000,
-        cssEase: "linear"
-    };
-    return (
-        <div className={styles.main_slider}>
-            <Slider {...settings}>
-                {
-                    imgs.map((item,index)=>(
-                        <div key={index} className={styles.slideImgDiv}>
-                            <img src={item} alt="img" />
-                        </div>
-                    ))
-                }
-            </Slider>
-        </div>
-    );
-
+  return (
+    <div className={styles.main_slider}>
+      <Marquee
+        className={styles.slideImgDiv}
+        direction='right'
+        gradient={false}
+      >
+        {imgs.map((el, i) => (
+          <div key={i} className='landing__main-content__slider__item'>
+            <img src={el.name} alt={el.name} />
+          </div>
+        ))}
+      </Marquee>
+    </div>
+  );
 }

@@ -5,19 +5,19 @@ import styles from './Works.module.scss';
 import { Animated } from 'react-animated-css';
 
 const Works = () => {
-  let imgArr = [
-    'Assets/art1.png',
-    'Assets/art2.png',
-    'Assets/art3.png',
-    'Assets/art4.png',
-    'Assets/art1.png',
-    'Assets/art2.png',
-    'Assets/art3.png',
-    'Assets/art4.png',
-    'Assets/art1.png',
-    'Assets/art2.png',
-    'Assets/art3.png',
-    'Assets/art4.png',
+  let collections = [
+    {name : 'Assets/art1.png'},
+    {name : 'Assets/art2.png'},
+    {name : 'Assets/art3.png'},
+    {name : 'Assets/art4.png'},
+    {name : 'Assets/art1.png'},
+    {name : 'Assets/art2.png'},
+    {name : 'Assets/art3.png'},
+    {name : 'Assets/art4.png'},
+    {name : 'Assets/art1.png'},
+    {name : 'Assets/art2.png'},
+    {name : 'Assets/art3.png'},
+    {name : 'Assets/art4.png'},
   ];
   return (
     <>
@@ -31,28 +31,35 @@ const Works = () => {
             </div>
           </Col>
           <Col sm={12} md={12}>
-            <SliderComponent imgs={imgArr} />
+            <SliderComponent imgs={collections} />
           </Col>
         </Row>
       </div>
-      <div className={styles.main_works} id='mint' style={{backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.01))'}}>
+      <div
+        className={styles.main_works}
+        id='mint'
+        style={{
+          backgroundImage:
+            'linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.01))',
+        }}
+      >
         <Row>
-          <Col sm={12} md={12}>
+          <Col xs={12} sm={12} md={12}>
             <Animated
               isVisible={true}
               animationIn='animate__fadeInUpBig'
               animationOut='animate__fadeInUpBig'
             >
               <div className={styles.joining}>
-              <Col sm={12} md={12}>
-              <div className={styles.works_head}>
-                <h2>
-                  MI<span>NT</span>
-                </h2>
-              </div>
-            </Col>
+                <Col xs={12} sm={12} md={12}>
+                  <div className={styles.works_head}>
+                    <h2>
+                      MI<span>NT</span>
+                    </h2>
+                  </div>
+                </Col>
                 <div className={styles.heading}>
-                  <h1 style={{color: '#ffffff'}}>Public Mint</h1>
+                  <h1 style={{ color: '#ffffff' }}>Public Mint</h1>
                 </div>
                 <div className={styles.content1}>
                   <h3>PreSale Is Live</h3>
@@ -69,7 +76,10 @@ const Works = () => {
                     <span>Eth Balance </span>
                     <span>0.000 ETH</span>
                   </div>
-                  <div className={styles.buttons} style={{display: 'flex', alignItems: 'center'}}>
+                  <div
+                    className={styles.buttons}
+                    style={{ display: 'flex', alignItems: 'center' }}
+                  >
                     <button className={styles.minus}>-</button>
                     <h1>1</h1>
                     <button>+</button>
@@ -81,7 +91,7 @@ const Works = () => {
                   </div>
                   <div className={styles.minted}>
                     <span>Max Mints Per Transaction</span>
-                     <span>5</span>
+                    <span>5</span>
                   </div>
                   <div className={styles.minted}>
                     <span>Max Mints Per Wallet</span>

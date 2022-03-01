@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import styles from './Partners.module.scss';
+import { ReactSVG } from 'react-svg';
 
 const Partners = () => {
   return (
@@ -19,14 +20,13 @@ const Partners = () => {
                 To Official
               </h3>
             </div>
-            <div className={styles.partners_icons}>
-              <a href="https://discord.gg/WYDmSGhJ9u" target='_blank'>
-                <img src='Assets/discord.png' alt='' />
+            {/* <div className={styles.partners_icons}>
+              <a href='https://discord.gg/WYDmSGhJ9u' target='_blank'>
               </a>
-            </div>
+            </div> */}
             <div className={styles.social_icons}>
-              <img src='Assets/insta.png' alt='' />
-              <img src='Assets/twitter.png' alt='' />
+              <ReactSVG src='Assets/discord.svg' className={styles.svgOne} />
+              <ReactSVG src='Assets/telegram.svg'className={styles.svgTwo} />
             </div>
           </div>
         </Col>

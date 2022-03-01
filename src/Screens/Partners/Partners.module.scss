@@ -33,11 +33,21 @@
       padding-top: 1rem;
     }
     .social_icons {
+      display: flex;
       @include media('mobile') {
         padding: 1rem;
       }
-      img {
-        margin: 0 0.5rem;
+      .svgOne{
+        fill: #5562EA;
+      }
+      .svgTwo{
+        fill: #F7F7F7;
+      }
+      svg {
+        cursor: pointer;
+        margin: 0 1rem;
+        width: 38px;
+        height: 38px;
         @include media('mobile') {
           width: 38px;
           height: 38px;

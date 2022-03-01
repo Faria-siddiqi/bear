@@ -50,15 +50,11 @@
     align-items: center;
     flex-direction: column;
     padding: 4rem;
-    // margin: 0 auto;
-    // margin-top: 7rem;
-    // background-color: #ffffff;
     @include media('mobile') {
-      width: 90%;
+      width: 100%;
     }
     .firstSection {
       background-color: #3a8bae;
-      // padding: 0.5rem 7rem;s
       width: 24rem;
       height: 4rem;
       margin-bottom: 3rem;
@@ -196,6 +192,9 @@
       width: 35em;
       display: flex;
       flex-direction: column;
+      @include media("mobile"){
+        width: 20rem;
+      }
     }
     .transacInfo {
       color: black;
