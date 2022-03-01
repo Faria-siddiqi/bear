@@ -36,27 +36,31 @@
       display: flex;
       @include media('mobile') {
         padding: 1rem;
+        margin-left: 2rem;
       }
       .svgOne {
-        fill: #f7f7f7;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        background-color: #ffffff;
+        svg {
+          position: relative;
+          right: 32px;
+        }
       }
+
       .svgTwo {
         fill: #f7f7f7;
       }
-      img {
-        cursor: pointer;
-        margin: 0 1rem;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        @include media('mobile') {
-          width: 38px;
-          height: 38px;
-        }
+      .svgTwo:hover {
+        fill: #ff5b5b;
+      }
+      .svgOne:hover {
+        background-color: #ff5b5b;
       }
       svg {
         cursor: pointer;
-        margin: 0 1rem;
+        margin: 0 2rem;
         width: 38px;
         height: 38px;
         @include media('mobile') {
