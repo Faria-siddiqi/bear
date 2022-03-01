@@ -1,5 +1,30 @@
 @import '../../Index.scss';
 
+.connectBtn {
+  // background: linear-gradient(to right, #237d8f 50%, #60cfff);
+  padding: 7px 15px;
+  background-color: darkgray;
+  line-height: 21px;
+  /* text-decoration: none; */
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 2px;
+  -webkit-transition: background .1s;
+  transition: background .1s;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  min-width: 64px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'akira';
+  transition: all 0.3s ease-in-out;
+}
+
+.connectBtn:hover {
+  background-color: #60cfff !important;
+  transition: all 0.3s ease-in-out;
+}
 .sidebar {
   background: #000;
   height: 100% !important;
@@ -112,7 +137,7 @@
     }
 
     .logo_image {
-      width: 10%;
+      width: 8%;
     }
     .logo_cover {
       margin-top: auto;
@@ -144,6 +169,7 @@
       }
     }
     .links {
+      align-items: center;
       display: flex;
       @include media('mobile') {
         display: none;

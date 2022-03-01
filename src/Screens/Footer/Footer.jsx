@@ -8,7 +8,7 @@ const Footer = () => {
             <Row>
                 <Col sm={12} md={12}>
                     <div className={styles.footer}>
-                        <p>©Copyright-2021 Lonely Bear Society. All rights reserved.</p>
+                        <p>©Copyright-2022 Bunnies To Official. All rights reserved.</p>
                     </div>
                 </Col>
             </Row>

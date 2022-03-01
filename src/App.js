@@ -14,7 +14,7 @@ import Footer from './Screens/Footer/Footer';
 const App = () => {
   return (
     <Home>
-      <div>
+      <div style={{background: 'rgba(0,0,0,0.2)'}}>
         <Heading />
         <AboutUs />
         <Works />

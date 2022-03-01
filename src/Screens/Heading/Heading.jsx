@@ -58,6 +58,13 @@ const Heading = () => {
               </p>
               <p
                 className={`${
+                  activeState === '#mint' ? styles.active_links : ''
+                }`}
+              >
+                <a href='#mint'>MINT</a>
+              </p>
+              <p
+                className={`${
                   activeState === '#teams' ? styles.active_links : ''
                 }`}
               >
@@ -70,6 +77,7 @@ const Heading = () => {
               >
                 <a href='#roadmaps'>ROADMAP</a>
               </p>
+              <button className={styles.connectBtn}><p>Connect</p></button>
               {/* <p
                 className={`${
                   activeState === '#faqss' ? styles.active_links : ''
@@ -108,6 +116,13 @@ const Heading = () => {
                   </p>
                   <p
                     className={`${
+                      activeState === '#mint' ? styles.active_links_mobile : ''
+                    }`}
+                  >
+                    <a href='#mint'>MINT</a>
+                  </p>
+                  <p
+                    className={`${
                       activeState === '#teams' ? styles.active_links_mobile : ''
                     }`}
                   >
@@ -120,7 +135,7 @@ const Heading = () => {
                   >
                     <a href='#roadmaps'>ROADMAP</a>
                   </p>
-                  <p
+                  {/* <p
                     className={`${
                       activeState === '#faqss' ? styles.active_links_mobile : ''
                     }`}
@@ -129,7 +144,7 @@ const Heading = () => {
                   </p>
                   <p>
                     <a>JOIN</a>
-                  </p>
+                  </p> */}
                 </div>
                 <div>
                   <img
@@ -164,9 +179,11 @@ const Heading = () => {
               animationOut='fadeIn'
               isVisible={true}
             >
-              <button className='animate__backInUp'>
-                <a href='https://discord.gg/WYDmSGhJ9u' target="_blank">JOIN OUR DISCORD</a>
-              </button>
+              <a href='https://discord.gg/WYDmSGhJ9u' target="_blank">
+                <button className='animate__backInUp'>
+                  JOIN OUR DISCORD
+                </button>
+              </a>
             </Animated>
           </div>
         </Col>
