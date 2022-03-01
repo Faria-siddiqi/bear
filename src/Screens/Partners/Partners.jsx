@@ -25,7 +25,7 @@ const Partners = () => {
               </a>
             </div> */}
             <div className={styles.social_icons}>
-              <ReactSVG src='Assets/discord.svg' className={styles.svgOne} />
+              <img src="Assets/discord3.png" alt="discord3" />
               <ReactSVG src='Assets/telegram.svg'className={styles.svgTwo} />
             </div>
           </div>
