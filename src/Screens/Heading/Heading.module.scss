@@ -1,35 +1,5 @@
 @import '../../Index.scss';
 
-.connectBtn {
-  background: linear-gradient(90deg, #60cfff, #0090bd);
-  border-radius: 2px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.175em;
-  line-height: 109.6%;
-  margin-left: 42px;
-  padding: 10px 12px;
-  text-transform: uppercase;
-  border: none;
-  color: #ffffff;
-  font-weight: bold;
-  font-family: lemons;
-  background: linear-gradient(to left, #4eb3c7 50%, #237d8f 50%, #60cfff);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: all 0.2s ease-out;
-  @include media('mobile') {
-    margin: 0;
-    padding: 20px 40px;
-  }
-}
-
-.connectBtn:hover {
-  background-position: right bottom;
-}
-
-
 .sidebar {
   background: #000;
   height: 100% !important;
@@ -60,6 +30,9 @@
       font-weight: bold;
       color: #ffffff;
       padding: 0.2rem 0.1rem;
+      .connectBtn{
+        margin-top: 14rem;
+      }
     }
     a {
       color: #ffffff !important;
