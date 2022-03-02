@@ -1,14 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import styles from './Heading.module.scss';
 import { Row, Col } from 'reactstrap';
 import { Animated } from 'react-animated-css';
+import 'react-toastify/dist/ReactToastify.css';
 import { useWindowScrollPositions } from '../../Components/Scrolls/Scrolls';
 import './OverRide.scss';
 
 
-const Heading = () => {
+const Heading = ({onClickConnectWallet, onClickDisconnectWallet, walletAddress}) => {
   let [sideBarState, setSiteBarState] = useState(false);
-  const { scrollX, scrollY } = useWindowScrollPositions();
+  const { scrollY } = useWindowScrollPositions();
   let [activeState, setActiveState] = useState('');
 
   function sidebarOpener() {
@@ -77,7 +79,7 @@ const Heading = () => {
               >
                 <a href='#roadmaps'>ROADMAP</a>
               </p>
-              <button className={styles.connectBtn}><p>Connect</p></button>
+              {walletAddress > 0 ? <button className={styles.connectBtn} onClick={() => onClickDisconnectWallet()}><p>{walletAddress.slice(0,5)+'...'+walletAddress.slice((walletAddress.length - 4), walletAddress.length)}</p></button> : <button className={styles.connectBtn} onClick={() => onClickConnectWallet()}><p>Connect</p></button>}
               {/* <p
                 className={`${
                   activeState === '#faqss' ? styles.active_links : ''

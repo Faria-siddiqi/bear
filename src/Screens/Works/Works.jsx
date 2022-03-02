@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Col, Row } from 'reactstrap';
 import SliderComponent from '../../Components/Slider/Slider';
 import styles from './Works.module.scss';
 import { Animated } from 'react-animated-css';
 
-const Works = () => {
+const Works = ({balance, walletAddress}) => {
   let collections = [
     {name : 'Assets/art1.png'},
     {name : 'Assets/art2.png'},
@@ -19,6 +19,21 @@ const Works = () => {
     {name : 'Assets/art3.png'},
     {name : 'Assets/art4.png'},
   ];
+  const [counter, setCount] = useState(1);
+  const decrease = () => {
+    if(counter > 1) {
+      setCount(counter-1)
+    }
+  }
+  const increase = () => {
+    if(counter < 5)
+    setCount(counter+1)
+  }
+
+  const max = () => {
+    setCount(5)
+  }
+
   return (
     <>
       <div className={styles.main_works} id='works'>
@@ -74,16 +89,16 @@ const Works = () => {
                   </div>
                   <div className={styles.minted}>
                     <span>Eth Balance </span>
-                    <span>0.000 ETH</span>
+                    <span>{`${walletAddress ? (balance === 0 ? 0 : balance.slice(0, 6)) : 0} ETH`}</span>
                   </div>
                   <div
                     className={styles.buttons}
                     style={{ display: 'flex', alignItems: 'center' }}
                   >
-                    <button className={styles.minus}>-</button>
-                    <h1>1</h1>
-                    <button>+</button>
-                    <button className={styles.maxBtn}>Max</button>
+                    <button onClick={() => decrease()}>-</button>
+                    <h1>{counter}</h1>
+                    <button onClick={() => increase()}>+</button>
+                    <button className={styles.maxBtn} onClick={() => max()} >Max</button>
                   </div>
                   <div className={styles.minted}>
                     <span>Total Cost </span>
