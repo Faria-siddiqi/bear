@@ -141,10 +141,6 @@ const Heading = ({onClickConnectWallet, onClickDisconnectWallet, walletAddress})
                     }`}>
                       <button className={styles.connectBtn}>Connect</button>
                     </p>
-                    <p className={`${activeState === '#roadmaps' ? styles.active_links_mobile : ''
-                    }`}>
-                      <button className={styles.connectBtn}>Connect</button>
-                    </p>
                   {/* <p
                     className={`${
                       activeState === '#faqss' ? styles.active_links_mobile : ''
