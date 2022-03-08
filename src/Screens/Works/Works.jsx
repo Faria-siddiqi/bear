@@ -1,10 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Col, Row } from 'reactstrap';
 import SliderComponent from '../../Components/Slider/Slider';
 import styles from './Works.module.scss';
 import { Animated } from 'react-animated-css';
 
-const Works = ({balance, walletAddress}) => {
+const Works = ({
+  walletAddress, 
+  onMint,
+  increase,
+  decrease,
+  max,
+  counter,
+  totalSupply,
+  loading
+}) => {
   let collections = [
     {name : 'Assets/art1.png'},
     {name : 'Assets/art2.png'},
@@ -19,21 +28,10 @@ const Works = ({balance, walletAddress}) => {
     {name : 'Assets/art3.png'},
     {name : 'Assets/art4.png'},
   ];
-  const [counter, setCount] = useState(1);
-  const decrease = () => {
-    if(counter > 1) {
-      setCount(counter-1)
-    }
-  }
-  const increase = () => {
-    if(counter < 5)
-    setCount(counter+1)
-  }
+  
+  
 
-  const max = () => {
-    setCount(5)
-  }
-
+  
   return (
     <>
       <div className={styles.main_works} id='works'>
@@ -73,23 +71,20 @@ const Works = ({balance, walletAddress}) => {
                     </h2>
                   </div>
                 </Col>
-                <div className={styles.heading}>
-                  <h1 style={{ color: '#ffffff' }}>Public Mint</h1>
+               <div className={styles.heading}>
+                  <h1 style={{ color: '#ffffff' }}>Presale is Live</h1>
                 </div>
-                <div className={styles.content1}>
-                  <h3>PreSale Is Live</h3>
-                </div>
-                <div className={styles.content2}>
-                  <a href='#'>View on Opensea</a>
-                </div>
+                {/* <div className={styles.content1}>
+                  <h3 style={{color: '#3a8bae'}}>PreSale Is Live</h3>
+                </div> */}
                 <div className={styles.mintingpart}>
                   <div className={styles.minted}>
                     <span>Total Minted </span>
-                    <span>0 / 0</span>
+                    <span>{totalSupply} / 7777</span>
                   </div>
                   <div className={styles.minted}>
-                    <span>Eth Balance </span>
-                    <span>{`${walletAddress ? (balance === 0 ? 0 : balance.slice(0, 6)) : 0} ETH`}</span>
+                    {/* <span>Eth Balance </span> */}
+                    {/* <span>{`${walletAddress ? (balance === 0 ? 0 : balance.slice(0, 6)) : 0} ETH`}</span> */}
                   </div>
                   <div
                     className={styles.buttons}
@@ -102,18 +97,18 @@ const Works = ({balance, walletAddress}) => {
                   </div>
                   <div className={styles.minted}>
                     <span>Total Cost </span>
-                    <span>0.1 ETH</span>
+                    <span>{(counter * 0.09).toFixed(2)} ETH</span>
                   </div>
                   <div className={styles.minted}>
                     <span>Max Mints Per Transaction</span>
-                    <span>5</span>
+                    <span>2</span>
                   </div>
                   <div className={styles.minted}>
                     <span>Max Mints Per Wallet</span>
-                    <span>20</span>
+                    <span>10</span>
                   </div>
                   <div className={styles.mintButton}>
-                    <button>Mint</button>
+                    {!loading ? <button onClick={() => onMint()}>Mint</button> : <p>Minting...</p>}
                   </div>
                 </div>
               </div>

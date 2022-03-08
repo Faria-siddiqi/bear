@@ -42,7 +42,6 @@ const Heading = ({onClickConnectWallet, onClickDisconnectWallet, walletAddress})
                   </h3>
               </a>
             </div>
-            {/* <div> */}
             <div className={`${styles.links}`}>
               <p
                 className={`${
@@ -79,7 +78,7 @@ const Heading = ({onClickConnectWallet, onClickDisconnectWallet, walletAddress})
               >
                 <a href='#roadmaps'>ROADMAP</a>
               </p>
-              {walletAddress > 0 ? <button className={styles.connectBtn} onClick={() => onClickDisconnectWallet()}><p>{walletAddress.slice(0,5)+'...'+walletAddress.slice((walletAddress.length - 4), walletAddress.length)}</p></button> : <button className={styles.connectBtn} onClick={() => onClickConnectWallet()}><p>Connect</p></button>}
+              {walletAddress ? <button className={styles.connectBtn} onClick={() => onClickDisconnectWallet()}><p>{walletAddress.slice(0,5)+'...'+walletAddress.slice((walletAddress.length - 4), walletAddress.length)}</p></button> : <button className={styles.connectBtn} onClick={() => onClickConnectWallet()}><p>Connect</p></button>}
               {/* <p
                 className={`${
                   activeState === '#faqss' ? styles.active_links : ''
@@ -139,18 +138,8 @@ const Heading = ({onClickConnectWallet, onClickDisconnectWallet, walletAddress})
                   </p>
                   <p className={`${activeState === '#roadmaps' ? styles.active_links_mobile : ''
                     }`}>
-                      <button className={styles.connectBtn}>Connect</button>
-                    </p>
-                  {/* <p
-                    className={`${
-                      activeState === '#faqss' ? styles.active_links_mobile : ''
-                    }`}
-                  >
-                    <a href='#faqss'>FAQ</a>
+                      {walletAddress ? <button className={styles.connectBtn} onClick={() => onClickDisconnectWallet()}>{walletAddress.slice(0,3)+'...'+walletAddress.slice((walletAddress.length - 3), walletAddress.length)}</button>:<button className={styles.connectBtn} onClick={() => onClickConnectWallet()}>Connect</button>}
                   </p>
-                  <p>
-                    <a>JOIN</a>
-                  </p> */}
                 </div>
                 <div>
                   <img

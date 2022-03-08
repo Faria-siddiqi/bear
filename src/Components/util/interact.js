@@ -12,7 +12,7 @@ export const connectWallet = async () => {
         if (addressArray.length > 0) {
           return {
             address: addressArray[0],
-            status: "👆🏽 You can mint new pack now.",
+            status: "👆🏽 You can mint new now.",
           }
         } else {
           return {
@@ -57,7 +57,7 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0 && chain === chainId) {
         return {
           address: addressArray[0],
-          status: "👆🏽 You can mint new pack now.",
+          status: "👆🏽 You can mint new now.",
         }
       } else {
         return {
